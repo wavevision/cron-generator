@@ -1,0 +1,24 @@
+{
+  "name": "wavevision/cron-generator",
+  "type": "library",
+  "license": "MIT",
+  "description": "Nette DI Extension for generating cron files",
+  "config": {
+    "platform": {
+      "php": "7.4"
+    },
+    "sort-packages": true
+  },
+  "autoload": {
+    "psr-4": {
+      "Wavevision\\": "src/"
+    }
+  },
+  "require": {
+    "nette/di": "^3.0",
+    "hollodotme/crontab-validator": "^2.0"
+  },
+  "require-dev": {
+    "wavevision/coding-standard": "^6.0"
+  }
+}
