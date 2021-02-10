@@ -1,0 +1,13 @@
+extensions:
+	cronGenerator: Wavevision\CronGenerator\DI\Extension
+
+cronGenerator:
+	tasks:
+		- frequency: 0 0 * * *
+		  command: app:hello-there
+		  options: -f
+		  log: true
+		- frequency: 0 1 * * *
+		  command: app:kenobi
+		  log: false
+

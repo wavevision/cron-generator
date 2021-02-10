@@ -14,11 +14,23 @@
       "Wavevision\\": "src/"
     }
   },
+  "autoload-dev": {
+    "psr-4": {
+      "Wavevision\\": "tests/"
+    }
+  },
+  "authors": [
+    {
+      "name": "Jakub Filla",
+      "email": "jakub.filla@wavevision.com"
+    }
+  ],
   "require": {
-    "nette/di": "^3.0",
-    "hollodotme/crontab-validator": "^2.0"
+    "hollodotme/crontab-validator": "^2.0",
+    "nette/di": "^3.0"
   },
   "require-dev": {
-    "wavevision/coding-standard": "^6.0"
+    "wavevision/coding-standard": "^6.0",
+    "wavevision/nette-tests": "^3.1"
   }
 }
