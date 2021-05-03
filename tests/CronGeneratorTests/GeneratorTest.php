@@ -18,11 +18,11 @@ class GeneratorTest extends DIContainerTestCase
 			implode(
 				PHP_EOL,
 				[
-					'0 0 * * * uu php bin/console app:hello-there -f >> log/app-hello-there.log 2>&1',
-					'0 1 * * * uu php bin/console app:kenobi > /dev/null 2>&1',
+					'0 0 * * * user php bin/console app:hello-there -f >> log/app-hello-there.log 2>&1',
+					'0 1 * * * user php bin/console app:kenobi > /dev/null 2>&1',
 				]
 			) . PHP_EOL,
-			$this->cronGenerator->generateConfig('uu', 'php bin/console', 'log')
+			$this->cronGenerator->generateConfig('log', 'user php bin/console')
 		);
 	}
 

@@ -37,7 +37,7 @@ class Generator
 		$this->tasks = $tasks;
 	}
 
-	public function generateConfig(string $user, string $consoleBin, string $logDir): string
+	public function generateConfig(string $logDir, ?string $commandPrefix = null): string
 	{
 		return implode(
 			PHP_EOL,
@@ -48,8 +48,7 @@ class Generator
 					array_filter(
 						[
 							$task[self::FREQUENCY],
-							$user,
-							$consoleBin,
+							$commandPrefix,
 							$task[self::COMMAND],
 							$task[self::OPTIONS] ?? null,
 							$task[self::LOG] ? sprintf(
